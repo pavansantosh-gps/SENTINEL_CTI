@@ -1,0 +1,7 @@
+Flask
+PyMongo==4.18.2
+python-dotenv
+rich
+requests
+beautifulsoup4
+flask-cors

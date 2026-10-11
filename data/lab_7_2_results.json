@@ -1,0 +1,127 @@
+{
+  "experiment": "Lab 7.2 Working Set Analysis",
+  "collection": "working_set_reports",
+  "documents_requested": 100000,
+  "target_bson_size_bytes": 2048,
+  "insert_results": {
+    "documents_inserted": 100000,
+    "insert_time_seconds": 2.31,
+    "insert_rate_docs_per_second": 43282.12
+  },
+  "size_results": {
+    "document_count": 100000,
+    "average_object_size_bytes": 2048.0,
+    "logical_data_size_bytes": 204800000,
+    "storage_size_bytes": 4476928,
+    "estimated_dataset_size_bytes": 204800000.0
+  },
+  "initial_cache": {
+    "maximum_bytes_configured": 7891582976,
+    "bytes_currently_in_cache": 234576965,
+    "tracked_dirty_bytes": 137266669,
+    "pages_read_into_cache": 66,
+    "pages_written_from_cache": 1446,
+    "pages_requested_from_cache": 216029,
+    "pages_evicted": 0
+  },
+  "final_cache": {
+    "maximum_bytes_configured": 7891582976,
+    "bytes_currently_in_cache": 234576965,
+    "tracked_dirty_bytes": 137266669,
+    "pages_read_into_cache": 66,
+    "pages_written_from_cache": 1446,
+    "pages_requested_from_cache": 316029,
+    "pages_evicted": 0
+  },
+  "random_read_results": [
+    {
+      "pass": 1,
+      "documents_read": 10000,
+      "elapsed_seconds": 1.961,
+      "reads_per_second": 5098.44,
+      "cache_fill_percent": 2.972,
+      "derived_read_residency_estimate_percent": 100.0,
+      "cache": {
+        "maximum_bytes_configured": 7891582976,
+        "bytes_currently_in_cache": 234576965,
+        "tracked_dirty_bytes": 137266669,
+        "pages_read_into_cache": 66,
+        "pages_written_from_cache": 1446,
+        "pages_requested_from_cache": 236029,
+        "pages_evicted": 0
+      }
+    },
+    {
+      "pass": 2,
+      "documents_read": 10000,
+      "elapsed_seconds": 2.012,
+      "reads_per_second": 4969.49,
+      "cache_fill_percent": 2.972,
+      "derived_read_residency_estimate_percent": 100.0,
+      "cache": {
+        "maximum_bytes_configured": 7891582976,
+        "bytes_currently_in_cache": 234576965,
+        "tracked_dirty_bytes": 137266669,
+        "pages_read_into_cache": 66,
+        "pages_written_from_cache": 1446,
+        "pages_requested_from_cache": 256029,
+        "pages_evicted": 0
+      }
+    },
+    {
+      "pass": 3,
+      "documents_read": 10000,
+      "elapsed_seconds": 1.99,
+      "reads_per_second": 5025.91,
+      "cache_fill_percent": 2.972,
+      "derived_read_residency_estimate_percent": 100.0,
+      "cache": {
+        "maximum_bytes_configured": 7891582976,
+        "bytes_currently_in_cache": 234576965,
+        "tracked_dirty_bytes": 137266669,
+        "pages_read_into_cache": 66,
+        "pages_written_from_cache": 1446,
+        "pages_requested_from_cache": 276029,
+        "pages_evicted": 0
+      }
+    },
+    {
+      "pass": 4,
+      "documents_read": 10000,
+      "elapsed_seconds": 1.967,
+      "reads_per_second": 5084.82,
+      "cache_fill_percent": 2.972,
+      "derived_read_residency_estimate_percent": 100.0,
+      "cache": {
+        "maximum_bytes_configured": 7891582976,
+        "bytes_currently_in_cache": 234576965,
+        "tracked_dirty_bytes": 137266669,
+        "pages_read_into_cache": 66,
+        "pages_written_from_cache": 1446,
+        "pages_requested_from_cache": 296029,
+        "pages_evicted": 0
+      }
+    },
+    {
+      "pass": 5,
+      "documents_read": 10000,
+      "elapsed_seconds": 1.978,
+      "reads_per_second": 5056.13,
+      "cache_fill_percent": 2.972,
+      "derived_read_residency_estimate_percent": 100.0,
+      "cache": {
+        "maximum_bytes_configured": 7891582976,
+        "bytes_currently_in_cache": 234576965,
+        "tracked_dirty_bytes": 137266669,
+        "pages_read_into_cache": 66,
+        "pages_written_from_cache": 1446,
+        "pages_requested_from_cache": 316029,
+        "pages_evicted": 0
+      }
+    }
+  ],
+  "notes": [
+    "Cache Fill is calculated from current cache bytes divided by maximum configured cache.",
+    "Derived read-residency estimate is an experiment metric based on changes in pages requested versus pages read into cache. It is not presented as an official MongoDB cache-hit metric."
+  ]
+}

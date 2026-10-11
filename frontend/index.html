@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SENTINEL CTI | Cyber Threat Intelligence Platform</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                S
+            </div>
+
+            <div class="brand-text">
+                <h1>SENTINEL</h1>
+                <span>CTI PLATFORM</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <button class="nav-item active" data-section="dashboard">
+                <span class="nav-icon">⌂</span>
+                <div>
+                    <strong>Dashboard</strong>
+                    <small>Overview</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item" data-section="iocs">
+
+                <span class="nav-icon">◎</span>
+
+                <div>
+                    <strong>Threat Indicators</strong>
+                    <small>IPs, domains, URLs & hashes</small>
+                </div>
+
+            </button>
+
+
+            <button class="nav-item" data-section="threats">
+
+                <span class="nav-icon">◆</span>
+
+                <div>
+                    <strong>Threat Intelligence</strong>
+                    <small>Known threat entities</small>
+                </div>
+
+            </button>
+
+
+            <button class="nav-item" data-section="vulnerabilities">
+
+                <span class="nav-icon">!</span>
+
+                <div>
+                    <strong>Vulnerability Intelligence</strong>
+                    <small>Multi-source CVE intelligence</small>
+                </div>
+
+            </button>
+
+
+            <button class="nav-item" data-section="reports">
+
+                <span class="nav-icon">▤</span>
+
+                <div>
+                    <strong>Security Reports</strong>
+                    <small>2020–2026 intelligence</small>
+                </div>
+
+            </button>
+
+
+            <button class="nav-item" data-section="classification">
+
+                <span class="nav-icon">⌁</span>
+
+                <div>
+                    <strong>Identify a Threat</strong>
+                    <small>Explainable classification</small>
+                </div>
+
+            </button>
+
+
+            <button class="nav-item" data-section="schema">
+
+                <span class="nav-icon">◇</span>
+
+                <div>
+                    <strong>Data Design</strong>
+                    <small>Embedded vs referenced data</small>
+                </div>
+
+            </button>
+
+
+            <button class="nav-item" data-section="monitoring">
+
+                <span class="nav-icon">◌</span>
+
+                <div>
+                    <strong>Database Performance</strong>
+                    <small>Working set & memory</small>
+                </div>
+
+            </button>
+
+
+            <button class="nav-item" data-section="live-monitor">
+
+                <span class="nav-icon">◉</span>
+
+                <div>
+                    <strong>Live Monitoring</strong>
+                    <small>New report detection</small>
+                </div>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <span class="connection-dot"></span>
+
+            <div>
+                <strong>Database Connected</strong>
+                <small>MongoDB is online</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN APPLICATION
+    ========================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <p class="eyebrow">
+                    CYBER THREAT INTELLIGENCE
+                </p>
+
+                <h2 id="page-title">
+                    Security Operations Dashboard
+                </h2>
+
+                <p id="page-description">
+                    A simple view of threats, indicators, reports and database activity.
+                </p>
+
+            </div>
+
+
+            <div class="system-status">
+
+                <span class="live-dot"></span>
+
+                <span>
+                    SYSTEM ONLINE
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             DASHBOARD
+        ====================================================== -->
+
+        <section id="dashboard" class="content-section active">
+
+
+            <!-- HERO -->
+
+            <div class="hero-card">
+
+                <div class="hero-content">
+
+                    <p class="eyebrow">
+                        SENTINEL CTI
+                    </p>
+
+                    <h3>
+                        Understand Cyber Threats
+                        <span>Faster.</span>
+                    </h3>
+
+                    <p class="hero-description">
+
+                        SENTINEL brings threat indicators, threat information,
+                        security reports, automated classification and MongoDB
+                        performance data into one easy-to-use platform.
+
+                    </p>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="hero-core">
+                        S
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MAIN STATISTICS
+            ================================================== -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <span class="stat-icon">
+                            ◎
+                        </span>
+
+                        <span class="stat-status">
+                            LIVE DATA
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        THREAT INDICATORS
+                    </p>
+
+                    <h3 id="stat-iocs">
+                        —
+                    </h3>
+
+                    <p class="stat-description">
+                        Suspicious IPs, domains, URLs and file hashes
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <span class="stat-icon">
+                            ◆
+                        </span>
+
+                        <span class="stat-status">
+                            LIVE DATA
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        KNOWN THREATS
+                    </p>
+
+                    <h3 id="stat-threats">
+                        —
+                    </h3>
+
+                    <p class="stat-description">
+                        Threat entities stored in the database
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <span class="stat-icon">
+                            ▤
+                        </span>
+
+                        <span class="stat-status">
+                            CTI DATA
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        CTI REPORTS
+                    </p>
+
+                    <h3 id="stat-cti-reports">
+                        —
+                    </h3>
+
+                    <p class="stat-description">
+                        Intelligence reports used by the project
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <span class="stat-icon">
+                            ◈
+                        </span>
+
+                        <span class="stat-status">
+                            2020–2026
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        SECURITY REPORTS
+                    </p>
+
+                    <h3 id="stat-security-reports">
+                        —
+                    </h3>
+
+                    <p class="stat-description">
+                        Annual cybersecurity reports in the dataset
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <span class="stat-icon">
+                            ◌
+                        </span>
+
+                        <span class="stat-status">
+                            DATABASE
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        ACTIVE TEST DATA
+                    </p>
+
+                    <h3 id="stat-working-set">
+                        —
+                    </h3>
+
+                    <p class="stat-description">
+                        Records used for MongoDB performance testing
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CHARTS
+            ================================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- IOC CHART -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                THREAT INDICATORS
+                            </p>
+
+                            <h3>
+                                What types of indicators do we have?
+                            </h3>
+
+                            <p class="panel-description">
+                                Distribution of suspicious IPs, domains,
+                                URLs and file hashes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="ioc-chart" class="chart-container">
+
+                        <div class="loading">
+                            Loading indicator data...
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- THREAT SEVERITY -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                THREAT SEVERITY
+                            </p>
+
+                            <h3>
+                                How serious are the threats?
+                            </h3>
+
+                            <p class="panel-description">
+                                Shows the severity level of stored threats.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="severity-chart" class="chart-container">
+
+                        <div class="loading">
+                            Loading threat data...
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REPORT HISTORY -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            SECURITY REPORT HISTORY
+                        </p>
+
+                        <h3>
+                            Reports collected by year
+                        </h3>
+
+                        <p class="panel-description">
+                            Seven years of annual cybersecurity reports.
+                        </p>
+
+                    </div>
+
+
+                    <span class="panel-badge">
+                        2020–2026
+                    </span>
+
+                </div>
+
+
+                <div id="year-chart" class="year-chart">
+
+                    <div class="loading">
+                        Loading report history...
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             THREAT INDICATORS
+        ====================================================== -->
+
+        <section id="iocs" class="content-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        THREAT INDICATORS
+                    </p>
+
+                    <h3>
+                        Indicators of Compromise
+                    </h3>
+
+                    <p>
+                        Search suspicious IP addresses, domains, URLs and file hashes.
+                    </p>
+
+                </div>
+
+                <span
+                    class="section-count"
+                    id="ioc-count">
+                    —
+                </span>
+
+            </div>
+
+
+
+            <div class="info-banner">
+
+                <span class="info-icon">
+                    i
+                </span>
+
+                <p>
+                    A threat indicator is a digital clue that may help identify
+                    suspicious or malicious activity.
+                </p>
+
+            </div>
+
+
+
+            <div class="toolbar">
+
+                <input
+                    type="text"
+                    id="ioc-search"
+                    placeholder="Search an IP, domain, URL, hash or category..."
+                >
+
+
+                <select id="ioc-type-filter">
+
+                    <option value="">
+                        All Indicator Types
+                    </option>
+
+                    <option value="IP">
+                        IP Address
+                    </option>
+
+                    <option value="Domain">
+                        Domain
+                    </option>
+
+                    <option value="URL">
+                        URL
+                    </option>
+
+                    <option value="Hash">
+                        File Hash
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="ioc-search-button"
+                    class="primary-button">
+
+                    Search
+
+                </button>
+
+            </div>
+
+
+
+            <div class="panel table-panel">
+
+                <div class="table-title">
+
+                    <h3>
+                        Indicator Records
+                    </h3>
+
+                    <span>
+                        Real data from MongoDB
+                    </span>
+
+                </div>
+
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Indicator</th>
+                            <th>Type</th>
+                            <th>Threat Category</th>
+                            <th>Confidence</th>
+                            <th>First Seen</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="ioc-table-body">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+             MULTI-SOURCE VULNERABILITY INTELLIGENCE
+        ====================================================== -->
+
+        <section id="vulnerabilities" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        MULTI-SOURCE INTELLIGENCE
+                    </p>
+
+                    <h3>
+                        Vulnerability Intelligence
+                    </h3>
+
+                    <p>
+                        Multi-Source Vulnerability Intelligence Consolidation
+                    </p>
+
+                </div>
+
+                <span
+                    class="section-count"
+                    id="vulnerability-source-count">
+                    Sources Integrated: 3
+                </span>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="info-banner">
+
+                <span class="info-icon">
+                    CVE
+                </span>
+
+                <div>
+                    <strong>
+                        Search by CVE ID
+                    </strong>
+
+                    <p>
+                        Enter a CVE to view the consolidated
+                        information stored in MongoDB.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="vulnerability-search">
+
+                <input
+                    type="text"
+                    id="vulnerability-cve-input"
+                    placeholder="Enter CVE ID e.g. CVE-2026-22799"
+                >
+
+                <button
+                    id="vulnerability-search-btn"
+                    type="button">
+                    Search Vulnerability
+                </button>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div
+                id="vulnerability-status"
+                class="vulnerability-status"
+                role="status"
+                aria-live="polite">
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div
+                id="vulnerability-result"
+                class="vulnerability-result"
+                hidden>
+
+
+                <!-- HEADER -->
+
+                <div class="vulnerability-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            CONSOLIDATED RESULT
+                        </p>
+
+                        <p class="eyebrow">
+                            TITLE
+                        </p>
+
+                        <h3 id="vulnerability-title">
+                            —
+                        </h3>
+
+                        <p class="eyebrow">
+                            CVE ID
+                        </p>
+
+                        <p id="vulnerability-cve">
+                            —
+                        </p>
+
+                    </div>
+
+                    <div
+                        id="vulnerability-severity"
+                        class="vulnerability-severity">
+                        —
+                    </div>
+
+                </div>
+
+
+                <!-- METRICS -->
+
+                <div class="vulnerability-metrics">
+
+                    <div class="vulnerability-metric">
+
+                        <span>
+                            CVSS Score
+                        </span>
+
+                        <strong id="vulnerability-cvss">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="vulnerability-metric">
+
+                        <span>
+                            CVSS Version
+                        </span>
+
+                        <strong id="vulnerability-cvss-version">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="vulnerability-metric">
+
+                        <span>
+                            CVSS Vector
+                        </span>
+
+                        <strong id="vulnerability-cvss-vector">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="vulnerability-metric">
+
+                        <span>
+                            EPSS
+                        </span>
+
+                        <strong id="vulnerability-epss">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="vulnerability-metric">
+
+                        <span>
+                            SOURCES INTEGRATED
+                        </span>
+
+                        <strong id="vulnerability-sources">
+                            3
+                        </strong>
+
+                    </div>
+
+
+                    <div class="vulnerability-metric">
+
+                        <span>
+                            PRODUCT
+                        </span>
+
+                        <strong id="vulnerability-product">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="vulnerability-description">
+
+                    <p class="eyebrow">
+                        DESCRIPTION
+                    </p>
+
+                    <p id="vulnerability-description-text">
+                        —
+                    </p>
+
+                </div>
+
+
+                <!-- SOURCE PROVENANCE -->
+
+                <div class="vulnerability-provenance">
+
+                    <div class="section-subheading">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                SOURCE PROVENANCE
+                            </p>
+
+                            <h4>
+                                Integrated Sources
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="vulnerability-source-list"
+                        class="vulnerability-source-list">
+
+                        <div class="source-card" data-source="osv">
+                            <h5>OSV.dev</h5>
+                            <p>Record ID: <span id="vulnerability-osv-record-id">—</span></p>
+                            <p>Source URL: <span id="vulnerability-osv-source-url">—</span></p>
+                        </div>
+
+                        <div class="source-card" data-source="euvd">
+                            <h5>EUVD / ENISA</h5>
+                            <p>Record ID: <span id="vulnerability-euvd-record-id">—</span></p>
+                            <p>Source URL: <span id="vulnerability-euvd-source-url">—</span></p>
+                        </div>
+
+                        <div class="source-card" data-source="circl">
+                            <h5>CIRCL Vulnerability-Lookup</h5>
+                            <p>Record ID: <span id="vulnerability-circl-record-id">—</span></p>
+                            <p>Source URL: <span id="vulnerability-circl-source-url">—</span></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VENDOR / PRODUCT -->
+
+                <div class="vulnerability-details-grid">
+
+                    <div class="vulnerability-detail-card">
+
+                        <p class="eyebrow">
+                            VENDOR
+                        </p>
+
+                        <strong id="vulnerability-vendor">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="vulnerability-detail-card">
+
+                        <p class="eyebrow">
+                            PRODUCT
+                        </p>
+
+                        <strong id="vulnerability-product-detail">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="panel vulnerability-consolidation">
+
+                <div class="section-subheading">
+                    <div>
+                        <p class="eyebrow">MONGODB</p>
+                        <h4>MongoDB Consolidation</h4>
+                    </div>
+                </div>
+
+                <p>
+                    The vulnerability information from multiple public sources is normalized and stored as one consolidated MongoDB document using the CVE ID as the common key.
+                </p>
+
+                <ul>
+                    <li>✓ One consolidated document</li>
+                    <li>✓ Source provenance preserved</li>
+                    <li>✓ Duplicate storage reduced</li>
+                </ul>
+
+            </div>
+
+
+        </section>
+
+        <!-- =====================================================
+             THREAT INTELLIGENCE
+        ====================================================== -->
+
+        <section id="threats" class="content-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        THREAT INTELLIGENCE
+                    </p>
+
+                    <h3>
+                        Known Threats
+                    </h3>
+
+                    <p>
+                        View the threat entities stored in the platform.
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="section-count"
+                    id="threat-count">
+                    —
+                </span>
+
+            </div>
+
+
+
+            <div class="info-banner">
+
+                <span class="info-icon">
+                    i
+                </span>
+
+                <p>
+                    Severity tells us how serious the stored threat has been classified.
+                </p>
+
+            </div>
+
+
+
+            <div class="toolbar">
+
+                <input
+                    type="text"
+                    id="threat-search"
+                    placeholder="Search threat name, type or ID..."
+                >
+
+
+                <select id="threat-severity-filter">
+
+                    <option value="">
+                        All Severity Levels
+                    </option>
+
+                    <option value="Critical">
+                        Critical
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="threat-search-button"
+                    class="primary-button">
+
+                    Search
+
+                </button>
+
+            </div>
+
+
+
+            <div
+                id="threat-grid"
+                class="threat-grid">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECURITY REPORTS
+        ====================================================== -->
+
+        <section id="reports" class="content-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        SECURITY REPORTS
+                    </p>
+
+                    <h3>
+                        Annual Cybersecurity Reports
+                    </h3>
+
+                    <p>
+                        Search through reports collected from 2020 to 2026.
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="section-count"
+                    id="report-count">
+
+                    987
+
+                </span>
+
+            </div>
+
+
+
+            <div class="info-banner">
+
+                <span class="info-icon">
+                    i
+                </span>
+
+                <p>
+                    These reports provide broader cybersecurity information such as
+                    threat trends, vulnerabilities, ransomware and emerging technologies.
+                </p>
+
+            </div>
+
+
+
+            <div class="toolbar">
+
+                <input
+                    type="text"
+                    id="report-search"
+                    placeholder="Search report title, organization or topic..."
+                >
+
+
+                <select id="report-year-filter">
+
+                    <option value="">
+                        All Years
+                    </option>
+
+                    <option value="2026">
+                        2026
+                    </option>
+
+                    <option value="2025">
+                        2025
+                    </option>
+
+                    <option value="2024">
+                        2024
+                    </option>
+
+                    <option value="2023">
+                        2023
+                    </option>
+
+                    <option value="2022">
+                        2022
+                    </option>
+
+                    <option value="2021">
+                        2021
+                    </option>
+
+                    <option value="2020">
+                        2020
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="report-search-button"
+                    class="primary-button">
+
+                    Search
+
+                </button>
+
+            </div>
+
+
+
+            <div
+                id="reports-list"
+                class="reports-list">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             THREAT CLASSIFICATION
+        ====================================================== -->
+
+        <section id="classification" class="content-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        THREAT ANALYSIS
+                    </p>
+
+                    <h3>
+                        Identify a Threat
+                    </h3>
+
+                    <p>
+                        Enter a description and let SENTINEL identify the likely threat type.
+                    </p>
+
+                </div>
+
+
+                <span class="panel-badge">
+                    EXPLAINABLE
+                </span>
+
+            </div>
+
+
+
+            <div class="classification-layout">
+
+
+                <!-- INPUT -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                STEP 1
+                            </p>
+
+                            <h3>
+                                Describe the activity
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <label for="classification-input">
+
+                        Threat description
+
+                    </label>
+
+
+                    <textarea
+                        id="classification-input"
+                        rows="9"
+                        placeholder="Example: The attacker encrypted files and demanded a ransom payment."
+                    ></textarea>
+
+
+                    <label for="classification-ioc-type">
+
+                        Indicator type (optional)
+
+                    </label>
+
+
+                    <select id="classification-ioc-type">
+
+                        <option value="">
+                            Not specified
+                        </option>
+
+                        <option value="IP">
+                            IP Address
+                        </option>
+
+                        <option value="Domain">
+                            Domain
+                        </option>
+
+                        <option value="URL">
+                            URL
+                        </option>
+
+                        <option value="Hash">
+                            File Hash
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        id="classify-button"
+                        class="primary-button full-width">
+
+                        Identify Threat
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- RESULT -->
+
+                <div
+                    id="classification-result"
+                    class="panel classification-result">
+
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ⌁
+                        </div>
+
+                        <h3>
+                            Analysis Result
+                        </h3>
+
+                        <p>
+                            Enter threat information on the left.
+                            SENTINEL will show the detected threat,
+                            severity and the reason for the result.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SCHEMA / DATA DESIGN
+        ====================================================== -->
+
+        <section id="schema" class="content-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        LAB 7.1
+                    </p>
+
+                    <h3>
+                        How Our Data Is Designed
+                    </h3>
+
+                    <p>
+                        Shows which information is stored together and which
+                        information is kept separately.
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="panel-badge"
+                    id="schema-status">
+                    —
+                </span>
+
+            </div>
+
+
+
+            <div class="info-banner">
+
+                <span class="info-icon">
+                    i
+                </span>
+
+                <p>
+                    MongoDB allows related information to be stored either inside
+                    the same document or in separate documents connected by references.
+                </p>
+
+            </div>
+
+
+
+            <div class="schema-stats">
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Reports Checked
+                    </span>
+
+                    <strong id="schema-documents">
+                        —
+                    </strong>
+
+                    <small>
+                        Documents analysed for BSON size
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Average Document Size
+                    </span>
+
+                    <strong id="schema-average">
+                        —
+                    </strong>
+
+                    <small>
+                        Average BSON size
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Largest Document
+                    </span>
+
+                    <strong id="schema-maximum">
+                        —
+                    </strong>
+
+                    <small>
+                        Maximum BSON size
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        16 MiB Limit Used
+                    </span>
+
+                    <strong id="schema-limit-percent">
+                        —
+                    </strong>
+
+                    <small>
+                        Percentage of MongoDB document limit
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            DATA RELATIONSHIPS
+                        </p>
+
+                        <h3>
+                            Stored Together vs Stored Separately
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="schema-decisions"
+                    class="schema-list">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             WORKING SET / DATABASE PERFORMANCE
+        ====================================================== -->
+
+        <section id="monitoring" class="content-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        LAB 7.2
+                    </p>
+
+                    <h3>
+                        Database Performance
+                    </h3>
+
+                    <p>
+                        See how much test data is active and how MongoDB is using memory.
+                    </p>
+
+                </div>
+
+
+                <span class="live-status-badge">
+
+                    <span class="live-dot"></span>
+                    LIVE
+
+                </span>
+
+            </div>
+
+
+
+            <div class="info-banner">
+
+                <span class="info-icon">
+                    i
+                </span>
+
+                <p>
+                    The working set is the data actively used during the test.
+                    MongoDB keeps frequently needed data in memory to improve access speed.
+                </p>
+
+            </div>
+
+
+
+            <div class="monitor-grid">
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Active Test Records
+                    </span>
+
+                    <strong id="monitor-documents">
+                        —
+                    </strong>
+
+                    <small>
+                        Documents in working set
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Size of Each Record
+                    </span>
+
+                    <strong id="monitor-object-size">
+                        —
+                    </strong>
+
+                    <small>
+                        Average object size
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Total Data Size
+                    </span>
+
+                    <strong id="monitor-logical-size">
+                        —
+                    </strong>
+
+                    <small>
+                        Logical working-set size
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Stored On Disk
+                    </span>
+
+                    <strong id="monitor-storage-size">
+                        —
+                    </strong>
+
+                    <small>
+                        MongoDB storage size
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        MongoDB Memory Used
+                    </span>
+
+                    <strong id="monitor-cache-fill">
+                        —
+                    </strong>
+
+                    <small>
+                        WiredTiger cache usage
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Data Currently in Memory
+                    </span>
+
+                    <strong id="monitor-current-cache">
+                        —
+                    </strong>
+
+                    <small>
+                        Current cache contents
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Data Requests
+                    </span>
+
+                    <strong id="monitor-pages-requested">
+                        —
+                    </strong>
+
+                    <small>
+                        Pages requested from cache
+                    </small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        Data Removed From Memory
+                    </span>
+
+                    <strong id="monitor-pages-evicted">
+                        —
+                    </strong>
+
+                    <small>
+                        Pages evicted from cache
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="panel monitor-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            WIREDTIGER CACHE
+                        </p>
+
+                        <h3>
+                            MongoDB Memory Activity
+                        </h3>
+
+                    </div>
+
+
+                    <span id="monitor-last-updated">
+                        Waiting for data...
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="monitor-bars"
+                    class="monitor-bars">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LIVE REPORT MONITOR
+        ====================================================== -->
+
+        <section id="live-monitor" class="content-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        AUTOMATED MONITORING
+                    </p>
+
+                    <h3>
+                        Live Report Monitoring
+                    </h3>
+
+                    <p>
+                        Checks the report source regularly for new security reports.
+                    </p>
+
+                </div>
+
+
+                <span class="panel-badge">
+                    EVERY 10 SEC
+                </span>
+
+            </div>
+
+
+
+            <div class="live-monitor-card">
+
+
+                <div class="live-monitor-icon">
+                    ◉
+                </div>
+
+
+                <div>
+
+                    <p class="eyebrow">
+                        WHAT DOES THIS DO?
+                    </p>
+
+                    <h3>
+                        Watches for new security reports
+                    </h3>
+
+                    <p>
+                        SENTINEL checks the public report source and compares
+                        it with the reports already stored in MongoDB.
+                        At the same time, it observes MongoDB database activity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            LATEST STATUS
+                        </p>
+
+                        <h3>
+                            Monitoring Activity
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div id="live-monitor-status">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ◌
+                        </div>
+
+                        <h3>
+                            Waiting for monitoring data
+                        </h3>
+
+                        <p>
+                            The live monitoring script records activity every 10 seconds.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- APPLICATION JAVASCRIPT -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
